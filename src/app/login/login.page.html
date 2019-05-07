@@ -1,0 +1,79 @@
+<ion-content class="swiper-no-swiping">
+
+    <img class="logo" src="./assets/imgs/logo.jpg">
+
+  <div class="container top" [hidden]="keyboard.invisible">
+    <ion-segment (ionChange)="segmentChanged($event)" value="login">
+      <ion-segment-button value="login">
+        <ion-label>Login</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="cadastro">
+        <ion-label>Cadastro</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <ion-slides>
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <h4>Login</h4>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="email"  placeholder="E-mail" [(ngModel)]="usuario.email"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="password" placeholder="Senha" [(ngModel)]="usuario.senha"></ion-input>
+        </ion-item>
+
+        <ion-button class="ion-margin-top" (click)="login()" color="light" expand="block">
+          Entrar
+        </ion-button>
+        <div class="botton" text-center>
+          <ion-grid>
+            <ion-row>
+              <ion-label class="logins">OU </ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-col size="3">
+                <ion-button color="danger" shape="round" fill="solid" (click)="loginG()">
+                  <ion-icon name="logo-google"></ion-icon>
+                </ion-button>
+              </ion-col>
+
+              <ion-col size="3">
+                <ion-button shape="round" fill="solid" (click)="onClick()">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <h4>Cadastro</h4>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="text" placeholder="Nome" [(ngModel)]="cadastro.name"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="email" placeholder="E-mail" [(ngModel)]="cadastro.email"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="password" placeholder="Senha" [(ngModel)]="cadastro.senha"></ion-input>
+        </ion-item>
+
+        <ion-button class="ion-margin-top" (click)="cadastrar()" color="light" expand="block">
+          Cadastrar
+        </ion-button>
+
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

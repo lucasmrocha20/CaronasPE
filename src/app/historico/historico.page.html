@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Histórico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="!loading">
+      <ion-card *ngFor="let op of historico">
+        <ion-item>
+          <ion-icon (click)="remove(op.uid)" color="danger" name="trash" slot="end"></ion-icon>
+          <ion-label>{{ op.name }}</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          Origem: {{ op.origem }},
+          Destino: {{ op.destino }},
+          Data: {{ op.data }},
+          Vagas: {{ op.vagas }},
+          Horário: {{ op.horario }},
+          Saída: {{ op.saida }},
+          Chegada: {{ op.chegada }},
+          Contribuição: {{ op.contribuicao }}
+        </ion-card-content>
+      </ion-card>
+    </div>
+</ion-content>
