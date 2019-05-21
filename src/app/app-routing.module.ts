@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },
   { path: 'historico', loadChildren: './historico/historico.module#HistoricoPageModule' },
   { path: 'op', loadChildren: './op/op.module#OpPageModule' },
-  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
+  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },  { path: 'mensagens', loadChildren: './mensagens/mensagens.module#MensagensPageModule' },
+
 ];
 
 @NgModule({

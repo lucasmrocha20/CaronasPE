@@ -17,14 +17,18 @@
       <div class="slide-inner ion-padding">
         <h4>Informe os dados abaixo.</h4>
 
-          <ion-item class="ion-margin-top" lines="none">
-            <ion-label>O que deseja</ion-label>
-            <ion-select placeholder="Select One">
-              <ion-select-option value="o">Oferecer</ion-select-option>
-              <ion-select-option value="p">Pedir</ion-select-option>
-            </ion-select>
-          </ion-item>
-
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-label>O que deseja</ion-label>
+          <ion-select>
+            <ion-select-option value="o">Oferecer</ion-select-option>
+            <ion-select-option value="p">Pedir</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="pedirOp()">
+            Pedir
+          </ion-button>
+        </ion-item>
         <ion-item class="ion-margin-top" lines="none">
           <ion-input type="text" placeholder="Nome" [(ngModel)]="op.name"></ion-input>
         </ion-item>
@@ -49,13 +53,15 @@
           <ion-input type="text" placeholder="Horário de saída" [(ngModel)]="op.horario"></ion-input>
         </ion-item>
 
-        <ion-item class="ion-margin-top" lines="none">
-          <ion-input type="text" placeholder="Local de saída" [(ngModel)]="op.saida"></ion-input>
-        </ion-item>
+        <div *ngIf="!pedir">
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="Local de saída" [(ngModel)]="op.saida"></ion-input>
+          </ion-item>
 
-        <ion-item class="ion-margin-top" lines="none">
-          <ion-input type="text" placeholder="Local de chegada" [(ngModel)]="op.chegada"></ion-input>
-        </ion-item>
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="Local de chegada" [(ngModel)]="op.chegada"></ion-input>
+          </ion-item>
+        </div>
 
         <ion-item class="ion-margin-top" lines="none">
           <ion-input type="text" placeholder="Contribuição" [(ngModel)]="op.contribuicao">R$:</ion-input>

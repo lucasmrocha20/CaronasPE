@@ -11,19 +11,19 @@
     <div *ngIf="!loading">
       <ion-card *ngFor="let op of historico">
         <ion-item>
-          <ion-icon (click)="remove(op.uid)" color="danger" name="trash" slot="end"></ion-icon>
+          <ion-icon (click)="remove(op.uid)" color="success" name="paper-plane" slot="end"></ion-icon>
           <ion-label>{{ op.name }}</ion-label>
         </ion-item>
 
         <ion-card-content>
-          Origem: {{ op.origem }},
-          Destino: {{ op.destino }},
-          Data: {{ op.data }},
-          Vagas: {{ op.vagas }},
-          Horário: {{ op.horario }},
-          Saída: {{ op.saida }},
-          Chegada: {{ op.chegada }},
-          Contribuição: {{ op.contribuicao }}
+         <ion-item lines="none">Origem: {{ op.origem }}</ion-item>
+         <ion-item lines="none">Destino: {{ op.destino }}</ion-item>
+         <ion-item lines="none">Data: {{ op.data }}</ion-item>
+         <ion-item lines="none">Vagas: {{ op.vagas }}</ion-item>
+         <ion-item lines="none">Horário: {{ op.horario }}</ion-item>
+         <ion-item lines="none">Saída: {{ op.saida }}</ion-item>
+         <ion-item lines="none">Chegada: {{ op.chegada }}</ion-item>
+         <ion-item lines="none">Contribuição: {{ op.contribuicao }}</ion-item>
         </ion-card-content>
       </ion-card>
     </div>

@@ -15,19 +15,24 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Perfil',
-      url: 'perfil',
+      url: '/perfil',
       icon: 'contact'
     },
     {
       title: 'Oferecer/Pedir Carona',
-      url: 'op',
+      url: '/op',
       icon: 'logo-model-s'
     },
     {
       title: 'Histórico',
-      url: 'historico',
+      url: '/historico',
       icon: 'list',
     },
+    {
+      title: 'Mensagens',
+      url: '/mensagens',
+      icon: 'paper-plane'
+    }
   ];
 
   constructor(

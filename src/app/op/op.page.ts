@@ -16,7 +16,7 @@ export class OpPage implements OnInit {
   @ViewChild(IonSlides) slides: IonSlides;
 
   op: Op;
-
+  pedir: boolean = false;
   constructor(public keyboard: Keyboard,
     private router: Router,
     public toastController: ToastController,
@@ -30,6 +30,14 @@ export class OpPage implements OnInit {
   salvar() {
     if (this.op) {
       this.insert();
+    }
+  }
+
+  pedirOp() {
+    if(this.pedir) {
+      this.pedir = false;
+    } else {
+      this.pedir = true;
     }
   }
 
