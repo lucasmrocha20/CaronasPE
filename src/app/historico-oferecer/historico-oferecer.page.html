@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Histórico Oferecer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="!loading">
+      <ion-card *ngFor="let oferecer of historicoO">
+        <ion-item>
+            <ion-icon (click)="message(oferecer.uid)" color="success" name="paper-plane" slot="end"></ion-icon>
+          <ion-icon (click)="remove(oferecer.uid)" color="danger" name="trash" slot="end"></ion-icon>
+          <ion-label>{{ oferecer.name }}</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+         <ion-item lines="none">Origem: {{ oferecer.origem }}</ion-item>
+         <ion-item lines="none">Destino: {{ oferecer.destino }}</ion-item>
+         <ion-item lines="none">Data: {{ oferecer.data }}</ion-item>
+         <ion-item lines="none">Vagas: {{ oferecer.vagas }}</ion-item>
+         <ion-item lines="none">Horário: {{ oferecer.horario }}</ion-item>
+         <ion-item lines="none">Saída: {{ oferecer.saida }}</ion-item>
+         <ion-item lines="none">Chegada: {{ oferecer.chegada }}</ion-item>
+         <ion-item lines="none">Contribuição: {{ oferecer.contribuicao }}</ion-item>
+        </ion-card-content>
+      </ion-card>
+    </div>
+</ion-content>

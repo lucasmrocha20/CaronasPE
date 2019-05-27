@@ -19,13 +19,23 @@ export class AppComponent {
       icon: 'contact'
     },
     {
-      title: 'Oferecer/Pedir Carona',
-      url: '/op',
+      title: 'Oferecer Carona',
+      url: '/oferecer',
       icon: 'logo-model-s'
     },
     {
-      title: 'Histórico',
-      url: '/historico',
+      title: 'Pedir Carona',
+      url: '/pedir',
+      icon: 'logo-model-s'
+    },
+    {
+      title: 'Histórico Oferecer',
+      url: '/historico-oferecer',
+      icon: 'list',
+    },
+    {
+      title: 'Histórico Pedir',
+      url: '/historico-pedir',
       icon: 'list',
     },
     {

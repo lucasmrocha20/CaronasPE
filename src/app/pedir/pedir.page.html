@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Pedir Carona</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="container" [hidden]="keyboard.invisible">
+  </div>
+
+  <ion-slides>
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <h4>Informe os dados abaixo.</h4>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="text" placeholder="Nome" [(ngModel)]="pedir.name"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="text" placeholder="Origem" [(ngModel)]="pedir.origem"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="text" placeholder="Destino" [(ngModel)]="pedir.destino"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="date" placeholder="Data" [(ngModel)]="pedir.data"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="text" placeholder="Vagas" [(ngModel)]="pedir.vagas"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="text" placeholder="Horário de saída" [(ngModel)]="pedir.horario"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="text" placeholder="Contribuição" [(ngModel)]="pedir.contribuicao">R$:</ion-input>
+        </ion-item>
+
+        <ion-button class="ion-margin-top" (click)="salvar()" color="light" expand="block">
+          Salvar
+        </ion-button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

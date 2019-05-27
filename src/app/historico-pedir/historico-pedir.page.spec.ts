@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OpPage } from './op.page';
+import { HistoricoPedirPage } from './historico-pedir.page';
 
-describe('OpPage', () => {
-  let component: OpPage;
-  let fixture: ComponentFixture<OpPage>;
+describe('HistoricoPedirPage', () => {
+  let component: HistoricoPedirPage;
+  let fixture: ComponentFixture<HistoricoPedirPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OpPage ],
+      declarations: [ HistoricoPedirPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OpPage);
+    fixture = TestBed.createComponent(HistoricoPedirPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

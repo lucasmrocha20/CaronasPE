@@ -6,9 +6,12 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'cadastro', loadChildren: './cadastro/cadastro.module#CadastroPageModule' },
   { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },
-  { path: 'historico', loadChildren: './historico/historico.module#HistoricoPageModule' },
-  { path: 'op', loadChildren: './op/op.module#OpPageModule' },
-  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },  { path: 'mensagens', loadChildren: './mensagens/mensagens.module#MensagensPageModule' },
+  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
+  { path: 'mensagens', loadChildren: './mensagens/mensagens.module#MensagensPageModule' },
+  { path: 'pedir', loadChildren: './pedir/pedir.module#PedirPageModule' },
+  { path: 'oferecer', loadChildren: './oferecer/oferecer.module#OferecerPageModule' },
+  { path: 'historico-oferecer', loadChildren: './historico-oferecer/historico-oferecer.module#HistoricoOferecerPageModule' },
+  { path: 'historico-pedir', loadChildren: './historico-pedir/historico-pedir.module#HistoricoPedirPageModule' },
 
 ];
 

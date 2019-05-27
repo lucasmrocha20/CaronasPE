@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Histórico Pedir</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="!loading">
+      <ion-card *ngFor="let pedir of historicoP">
+        <ion-item>
+          <ion-icon (click)="message(pedir.uid)" color="success" name="paper-plane" slot="end"></ion-icon>
+          <ion-icon (click)="remove(pedir.uid)" color="danger" name="trash" slot="end"></ion-icon>
+          <ion-label>{{ pedir.name }}</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+         <ion-item lines="none">Origem: {{ pedir.origem }}</ion-item>
+         <ion-item lines="none">Destino: {{ pedir.destino }}</ion-item>
+         <ion-item lines="none">Data: {{ pedir.data }}</ion-item>
+         <ion-item lines="none">Vagas: {{ pedir.vagas }}</ion-item>
+         <ion-item lines="none">Horário: {{ pedir.horario }}</ion-item>
+         <ion-item lines="none">Saída: {{ pedir.saida }}</ion-item>
+         <ion-item lines="none">Chegada: {{ pedir.chegada }}</ion-item>
+         <ion-item lines="none">Contribuição: {{ pedir.contribuicao }}</ion-item>
+        </ion-card-content>
+      </ion-card>
+    </div>
+</ion-content>
