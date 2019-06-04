@@ -11,7 +11,7 @@
     <div *ngIf="!loading">
       <ion-card *ngFor="let pedir of historicoP">
         <ion-item>
-          <ion-icon (click)="message(pedir.uid)" color="success" name="paper-plane" slot="end"></ion-icon>
+          <ion-icon (click)="message(pedir.uid)" color="success" name="chatbubbles" slot="end"></ion-icon>
           <ion-icon (click)="remove(pedir.uid)" color="danger" name="trash" slot="end"></ion-icon>
           <ion-label>{{ pedir.name }}</ion-label>
         </ion-item>

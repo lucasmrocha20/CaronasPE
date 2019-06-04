@@ -52,6 +52,7 @@ export class LoginPage implements OnInit {
     this.afAuth.auth.createUserWithEmailAndPassword(this.cadastro.email, this.cadastro.senha)
     .then(result =>{
       this.presentToast('Usuário criado com sucesso.')
+
     }).catch(err =>{
       this.presentToast('Erro ao cadastrar usuário.')
       console.log(err);

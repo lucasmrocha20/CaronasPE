@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Usuario } from './model/usuario';
+import { DBService } from './services/db.service';
 
 @Component({
   selector: 'app-root',
@@ -45,12 +47,16 @@ export class AppComponent {
     }
   ];
 
+  usuarios: Usuario[];
+  usuario: Usuario;
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private router: Router,
-    private fAuth: AngularFireAuth
+    private fAuth: AngularFireAuth,
+    private dbService: DBService
   ) {
     this.initializeApp();
   }
@@ -60,6 +66,11 @@ export class AppComponent {
     .then(resut => {
       this.router.navigate(["/login"]);
     })
+  }
+
+  private async loadUser() {
+    this.usuarios = await this.dbService.search<Usuario>('/usuario', 'email', this.usuario.email);
+    this.usuario = this.usuarios[0];
   }
 
   initializeApp() {

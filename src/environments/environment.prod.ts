@@ -6,6 +6,8 @@ export const environment = {
     databaseURL: "https://appcarona-54611.firebaseio.com",
     projectId: "appcarona-54611",
     storageBucket: "appcarona-54611.appspot.com",
-    messagingSenderId: "436023432807"
+    messagingSenderId: "436023432807",
+    appId: "1:436023432807:web:90cc45cef85c5a9c"
   }
+  
 };

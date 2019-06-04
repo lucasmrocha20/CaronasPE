@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController, ToastController } from '@ionic/angular';
+import { ModalController, ToastController, AlertController } from '@ionic/angular';
 import { DBService } from '../services/db.service';
 import { Oferecer } from '../model/oferecer';
 
@@ -16,7 +16,8 @@ export class HistoricoOferecerPage implements OnInit {
 
   constructor(public modalController: ModalController, 
     public dbService: DBService, 
-    public toastController: ToastController) { }
+    public toastController: ToastController,
+    public alertController: AlertController) { }
 
     async ngOnInit() {
       this.loading = true;
