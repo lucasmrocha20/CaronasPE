@@ -12,6 +12,7 @@ export class HistoricoOferecerPage implements OnInit {
 
   historicoO: Oferecer[];
 
+
   loading: boolean;
 
   constructor(public modalController: ModalController, 
@@ -23,6 +24,10 @@ export class HistoricoOferecerPage implements OnInit {
       this.loading = true;
   
       await this.LoadingListaHistorico();
+  }
+
+  confirm(){
+    this.presentToast('Confirmado com sucesso!'); 
   }
 
   private async LoadingListaHistorico() {

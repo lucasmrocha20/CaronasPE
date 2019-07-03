@@ -3,10 +3,11 @@ export class Oferecer {
     origem: string;
     destino: string;
     data: Date;
-    vagas: string;
+    vagas: number;
     horario: string;
     chegada: string;
     saida: string;
     contribuicao: string;
+    vagasOcupadas: number;
     uid: string;
 }
